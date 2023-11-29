@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { inter } from '@/components/font'
+import Header from '@/components/header'
 
 export const metadata: Metadata = {
   title: 'Content Canvas',
@@ -16,7 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+      </head>
+      <body className={inter.className}>
+        {/* <Header /> */}
+        {children}
+        </body>
     </html>
   )
 }

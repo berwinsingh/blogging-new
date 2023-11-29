@@ -1,10 +1,11 @@
-import Auth from '@/components/auth'
-import Image from 'next/image'
+import Header from '@/components/header'
+import HeroSection from '@/components/hero-section'
 
 export default function Home() {
   return (
     <main className="">
-        <Auth/>
+        <Header />
+        <HeroSection/>
     </main>
   )
 }
