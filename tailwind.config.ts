@@ -72,6 +72,9 @@ module.exports = {
       },
       height:{
         hero: "45rem"
+      },
+      screens:{
+        "xs": {'max': '400px'},
       }
     },
   },

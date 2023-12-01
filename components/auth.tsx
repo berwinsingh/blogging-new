@@ -40,8 +40,8 @@ const Auth = () => {
     
     }
   return (
-    <div className="flex flex-col items-center gap-3">
-      <h1 className={`${titillium_web.className} text-4xl font-bold`}>
+    <div className="flex flex-col items-center gap-3 xs:gap-2">
+      <h1 className={`${titillium_web.className} text-4xl font-bold xs:mt-5`}>
         {pathname === "/sign-in" ? "Login" : "Sign Up"}
       </h1>
       <Input
@@ -64,12 +64,12 @@ const Auth = () => {
       </Button>
       <p className="text-sm">or</p>
       <Button className="drop-shadow-md bg-white text-black text-md hover:bg-gray-100" onClick={signInWithGoogle}>
-        <span id="google logo" className="mr-2">
-          <Image src={"/Google icon.png"} width={18} height={18} alt="Sign in with Google, Google logo" />
+        <span className="mr-2">
+          <Image id="google-logo" src={"/Google icon.png"} width={18} height={18} alt="Sign in with Google, Google logo" />
         </span>
         {pathname === "/sign-in" ? "Login using" : "Sign up with"} Google
       </Button>
-      <Link href={pathname === "/sign-in" ? "sign-up" : "sign-in"} className="underline text-blue-500 text-sm hover:text-blue-600">
+      <Link href={pathname === "/sign-in" ? "sign-up" : "sign-in"} className="underline text-blue-500 text-sm hover:text-blue-600 xs:mb-4">
         {pathname === "/sign-in" ? "Create a new account" : "Already have a account? Login."}
       </Link>
     </div>
