@@ -74,7 +74,7 @@ module.exports = {
         hero: "45rem"
       },
       screens:{
-        "xs": {'max': '400px'},
+        "xs": {'max': '600px'},
       }
     },
   },

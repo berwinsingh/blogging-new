@@ -5,11 +5,12 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import { titillium_web } from "./font";
 import { usePathname } from "next/navigation";
+import { auth } from "@/config/firebase";
 
 const NavElements = ()=>{
     const pathname = usePathname()
     return(
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center xs:hidden">
             <Link href={"/home"} className={`link ${pathname === '/' ? "text-blue-700" : ""} text-sm hover:text-blue-800`}>Home</Link>
             <Link href={"/blog"} className={`link ${pathname === '/blog' ? "text-blue-700" : ""} text-sm hover:text-blue-800`}>Blog</Link>
             <Link href={"/about"} className={`link ${pathname === '/about' ? "text-blue-700" : ""} text-sm hover:text-blue-800`}>About</Link>

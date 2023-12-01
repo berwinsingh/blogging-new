@@ -12,7 +12,7 @@ const HeroImage = {
 export default function HeroSection() {
   return (
     <div className="h-hero mx-2 rounded-xl mt-2" style={HeroImage}>
-      <div className="w-full bg-black bg-opacity-40 flex flex-col justify-end items-start h-full p-4 rounded-xl gap-4 pb-10">
+      <div className="w-full bg-black bg-opacity-40 flex flex-col justify-end items-start h-full p-4 rounded-xl gap-4 pb-10 xs:gap-2">
         <h3 className={`${titillium_web.className} text-white text-lg font-semibold`}>
           Featured
         </h3>

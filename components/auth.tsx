@@ -2,7 +2,7 @@
 
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import { auth, googleProvider } from "../config/firebase";
+import { auth, googleProvider } from "@/config/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
 import Image from "next/image";
@@ -40,12 +40,13 @@ const Auth = () => {
     
     }
   return (
-    <div className="flex flex-col items-center gap-3 xs:gap-2">
+    <div id="authentication-menu" className="flex flex-col items-center gap-3 xs:gap-2 xs:absolute">
       <h1 className={`${titillium_web.className} text-4xl font-bold xs:mt-5`}>
         {pathname === "/sign-in" ? "Login" : "Sign Up"}
       </h1>
       <Input
         placeholder="Email..."
+        type="email"
         className="border-black w-96"
         onChange={(e: React.FormEvent<HTMLInputElement>) =>
           setEmail(e.currentTarget.value)
@@ -65,7 +66,7 @@ const Auth = () => {
       <p className="text-sm">or</p>
       <Button className="drop-shadow-md bg-white text-black text-md hover:bg-gray-100" onClick={signInWithGoogle}>
         <span className="mr-2">
-          <Image id="google-logo" src={"/Google icon.png"} width={18} height={18} alt="Sign in with Google, Google logo" />
+          <Image id="google-logo" src={"/Google icon.png"} width={18} height={18} alt="Sign in with Google, Google logo" className="xs:scale-150" />
         </span>
         {pathname === "/sign-in" ? "Login using" : "Sign up with"} Google
       </Button>
